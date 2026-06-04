@@ -1,9 +1,3 @@
-"""
-PINTARIN – Streamlit Dashboard (Dark Theme)
-Jalankan: streamlit run pintarin_streamlit_dashboard.py
-Pastikan PINTARIN_MASTER_FINAL_5000.csv ada di folder yang sama.
-"""
-
 import streamlit as st
 import pandas as pd
 import numpy as np
