@@ -89,9 +89,12 @@ def dark_ax(fig, ax):
     ax.grid(axis="y", alpha=0.15, color=WHITE)
 
 # ── Load data ────────────────────────────────────────────────────────────────
+import os
+
 @st.cache_data
 def load_data():
-    df = pd.read_csv("PINTARIN_MASTER_FINAL_5000.csv")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    df = pd.read_csv(os.path.join(base_dir, "PINTARIN_MASTER_FINAL_5000.csv"))
     df["Status_Resiko"] = pd.Categorical(
         df["Status_Resiko"], categories=ORDER, ordered=True
     )
